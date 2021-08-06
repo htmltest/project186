@@ -1,0 +1,792 @@
+*,
+*::before,
+*::after {outline:none; box-sizing:border-box}
+
+html {min-width:480px}
+
+body {min-width:480px; margin:0; padding:0; background:#091051 url(../images/bg.png) center top; color:#fff; -webkit-text-size-adjust:100%; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+.fonts-loaded body {font-family:Gilroy, sans-serif}
+
+::-ms-clear {display:none}
+
+.wrapper {width:100%; min-width:480px; position:relative; overflow:hidden}
+
+.container {max-width:1240px; margin:0 auto; padding:0 20px}
+.container::after {content:""; display:block; clear:both}
+
+@media screen and (max-width:1239px) {
+    .container {padding:0 34px}
+}
+
+@media screen and (max-width:767px) {
+    .container {padding:0 20px}
+}
+
+.btn {display:inline-block; vertical-align:top; height:78px; padding:0 50px; color:#fff; text-decoration:none; font-weight:bold; font-size:48px; line-height:78px; letter-spacing:0; background:linear-gradient(0deg, #8200ce 0%, #d90091 100%); border-radius:4px}
+@media screen and (min-width:1240px) {
+    .btn:hover {background:linear-gradient(0deg, #ff4578 0%, #ff902f 100%)}
+}
+
+@media screen and (max-width:1239px) {
+    .btn {height:57px; padding:0 30px; font-size:42px; line-height:57px}
+}
+
+@media screen and (max-width:767px) {
+    .btn {height:48px; padding:0 16px; font-size:35px; line-height:48px}
+}
+
+.on-mobile {display:none}
+
+@media screen and (max-width:767px) {
+    .on-mobile {display:block}
+}
+
+header {position:absolute; left:0; top:0; right:0; z-index:20}
+
+@media screen and (max-width:1239px) {
+    header.header-center {padding:45px 0 0 0}
+}
+
+@media screen and (max-width:767px) {
+    header.header-center {padding:26px 0 0 0}
+}
+
+.logo {display:block; float:left; width:271px; height:54px; margin:32px 0 0 -40px; background:url(../images/logo.svg) no-repeat; background-size:100%}
+.slider-item-inverse .logo {background-image:url(../images/logo-inverse.svg)}
+.logo-sep {float:left; width:2px; height:38px; background:#4c4d66; margin:45px 0 0 20px}
+.slider-item-inverse .logo-sep {background:#c0bebf}
+.dns-logo {float:left; width:200px; height:72px; background:url(../images/dns-logo.svg) no-repeat; background-size:100%; margin:27px 0 0 21px}
+
+@media screen and (min-width:1240px) and (max-width:1440px) {
+    .logo {width:207px; height:41px; margin:22px 0 0 129px}
+}
+
+@media screen and (max-width:1239px) {
+    .logo {float:right; width:202px; height:40px; margin:45px 6px 0 0}
+    header.header-center .logo {float:none; margin:0 auto}
+}
+
+@media screen and (max-width:767px) {
+    .logo {width:155px; height:30px; margin:26px 0 0 0}
+}
+
+.slider {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; background:#020626}
+.slider-item {display:inline-block; vertical-align:top; width:100%}
+.slider-item-inner {height:793px; position:relative; overflow:hidden}
+.slider-item-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center}
+.slider-item-bg-desktop {display:none}
+.slider-item-bg-tablet {display:none}
+.slider-item-bg-mobile {display:none}
+.slider-item-content {position:relative}
+.slider .slick-prev,
+.slider .slick-next {display:block; position:absolute; z-index:2; top:50%; width:24px; height:40px; border:none; border-radius:0; margin:-20px 0 0 0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:none}
+.slider .slick-prev {left:100px; background:url(../images/slick-prev.png) no-repeat}
+.slider .slick-next {right:100px; background:url(../images/slick-next.png) no-repeat}
+@media screen and (min-width:1240px) {
+    .slider .slick-prev:hover,
+    .slider .slick-next:hover {background-position:left -40px}
+}
+.slider .slick-prev.inverse {background-image:url(../images/slick-prev-inverse.png)}
+.slider .slick-next.inverse {background-image:url(../images/slick-next-inverse.png)}
+.slider .slick-dots {margin:0; padding:0; list-style:none; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; position:absolute; left:0; bottom:27px; right:0}
+.slider .slick-dots li {margin:0 0 0 6px; padding:0; display:inline-block; vertical-align:top; position:relative}
+.slider .slick-dots li::before {display:none}
+.slider .slick-dots li:first-child {margin:0}
+.slider .slick-dots li button {display:block; position:relative; width:95px; height:6px; border-radius:3px; border:none; background:#959595; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
+@media screen and (min-width:1240px) {
+    .slider .slick-dots li button:hover {background:linear-gradient(0deg, #ff4578 0%, #ff902f 100%)}
+}
+.slider .slick-dots li button::after {content:""; display:block; position:absolute; left:0; top:0; width:0; bottom:0; border-radius:3px; background:#fbe44d}
+.slider .slick-dots li button.active {opacity:1}
+.slider .slick-dots li button.active::after {width:100%; transition:width 5s linear}
+
+@media screen and (min-width:1240px) and (max-width:1440px) {
+    .slider-item-inner {height:500px}
+    .slider-item-bg {display:none}
+    .slider-item-bg-desktop {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center bottom}
+    .slider .slick-prev,
+    .slider .slick-next {width:18px; height:30px; margin:-15px 0 0 0}
+    .slider .slick-prev {left:30px; background:url(../images/slick-prev-desktop.png) no-repeat}
+    .slider .slick-next {right:30px; background:url(../images/slick-next-desktop.png) no-repeat}
+    .slider .slick-prev:hover,
+    .slider .slick-next:hover {background-position:left -30px}
+    .slider .slick-prev.inverse {background-image:url(../images/slick-prev-desktop-inverse.png)}
+    .slider .slick-next.inverse {background-image:url(../images/slick-next-desktop-inverse.png)}
+    .slider .slick-dots {bottom:15px}
+    .slider .slick-dots li {margin:0 0 0 8px}
+    .slider .slick-dots li:first-child {margin:0}
+    .slider .slick-dots li button {width:72px; height:3px; border-radius:0}
+}
+
+@media screen and (max-width:1239px) {
+    .slider-item-inner {height:1024px}
+    .slider-item-bg {display:none}
+    .slider-item-bg-tablet {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center bottom}
+    .slider .slick-dots {bottom:28px}
+    .slider .slick-dots li {margin:0 0 0 11px}
+    .slider .slick-dots li:first-child {margin:0}
+    .slider .slick-dots li button {width:106px; height:5px}
+}
+
+@media screen and (max-width:767px) {
+    .slider-item-inner {height:755px}
+    .slider-item-bg-tablet {display:none}
+    .slider-item-bg-mobile {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center bottom}
+    .slider .slick-dots {bottom:18px}
+    .slider .slick-dots li {margin:0 0 0 7px}
+    .slider .slick-dots li:first-child {margin:0}
+    .slider .slick-dots li button {width:68px; height:3px}
+}
+
+.slider-item-1 {float:left; text-align:center; margin:233px 0 0 -40px}
+.slider-item-1-title {font-weight:bold; font-size:78px; line-height:83px; letter-spacing:-0.01em; text-transform:uppercase}
+.slider-item-1-text {font-weight:500; font-size:27px; line-height:27px; letter-spacing:-0.025em; text-transform:uppercase; margin:24px 0 0 0}
+.slider-item-1-super {font-weight:bold; font-size:39px; line-height:47px; letter-spacing:-0.025em; text-transform:uppercase; margin:36px 0 0 0}
+.slider-item-1-notice {text-align:left; font-size:20px; line-height:20px; letter-spacing:0; font-style:italic; margin:171px 0 0 0}
+
+@media screen and (min-width:1240px) and (max-width:1440px) {
+    .slider-item-1 {margin:124px 0 0 100px}
+    .slider-item-1-title {font-size:60px; line-height:63px; letter-spacing:0}
+    .slider-item-1-text {font-size:18px; line-height:19px; letter-spacing:-0.02em; margin:18px 0 0 0}
+    .slider-item-1-dates {margin:30px 0 0 0}
+    .slider-item-1-dates span {height:59px; font-size:30px; line-height:57px; border-width:1px; padding:0 30px}
+}
+
+@media screen and (max-width:1239px) {
+    .slider-item-1 {float:none; margin:0}
+    .slider-item-1-title {font-size:56px; line-height:59px; padding:128px 0 0 0}
+    .slider-item-1-text {font-size:20px; line-height:21px; letter-spacing:-0.02em; margin:19px 0 0 0}
+    .slider-item-1-dates {margin:0; position:absolute; left:0; top:878px; right:0}
+    .slider-item-1-dates span {height:55px; padding:0 24px; border-width:1px; font-size:40px; line-height:53px}
+}
+
+@media screen and (max-width:767px) {
+    .slider-item-1-title {padding:83px 0 0 0}
+    .slider-item-1-text {margin:16px 0 0 0}
+    .slider-item-1-dates {top:655px}
+    .slider-item-1-dates span {height:48px; font-size:32px; line-height:46px}
+}
+
+.slider-item-2 {margin:0 -40px}
+.slider-item-2-headers {font-weight:bold; font-size:47px; line-height:47px; color:#4825f4; padding:306px 0 0 0}
+.slider-item-2-headers::after {content:""; display:block; clear:both}
+.slider-item-2-header {float:right; letter-spacing:0.025em; padding:0 16px 0 0}
+.slider-item-2-header:first-child {float:left; letter-spacing:-0.025em}
+.slider-item-2-container {padding:62px 0 0 0}
+.slider-item-2-container::after {content:""; display:block; clear:both}
+.slider-item-2-left {float:left}
+.slider-item-2-right {float:right}
+.slider-item-2-logo {line-height:0}
+.slider-item-2-logo img {display:block; height:32px}
+.slider-item-2-container ul {margin:19px 0 0 -2px; padding:0; list-style:none; font-weight:500; font-size:24px; line-height:28px; letter-spacing:0; color:#d6d6d6}
+.slider-item-2-container ul li {margin:12px 0 0 0; padding:0}
+.slider-item-2-btn {margin:35px 0 0 0}
+.slider-item-2-btn .btn {height:69px; line-height:69px; padding:0 30px; font-size:36px}
+
+@media screen and (min-width:1240px) and (max-width:1440px) {
+    .slider-item-2 {margin:0 140px}
+    .slider-item-2-headers {font-size:30px; line-height:40px; padding:237px 0 0 0}
+    .slider-item-2-header {padding:0}
+    .slider-item-2-container {padding:23px 0 0 0}
+    .slider-item-2-logo img {height:21px}
+    .slider-item-2-container ul {margin:13px 0 0 -2px; font-size:16px; line-height:20px; font-weight:normal; color:#fff}
+    .slider-item-2-container ul li {margin:6px 0 0 0}
+    .slider-item-2-btn {margin:13px 0 0 0}
+    .slider-item-2-btn .btn {height:50px; line-height:50px; padding:0; font-size:24px; width:125px; text-align:center}
+}
+
+@media screen and (max-width:1239px) {
+    .slider-item-2 {margin:0}
+    .slider-item-2-headers {position:absolute; left:0; top:926px; right:0; font-size:36px; line-height:42px; padding:0; text-align:center}
+    .slider-item-2-header {float:none; letter-spacing:-0.01em; padding:0; display:inline}
+    .slider-item-2-header:first-child {float:none; display:inline}
+    .slider-item-2-container {padding:61px 0 0 10px}
+    .slider-item-2-left {float:none}
+    .slider-item-2-right {float:none; margin:60px 0 0 0}
+    .slider-item-2-logo img {height:48px}
+    .slider-item-2-container ul {margin:20px 0 0 0; font-size:24px; line-height:28px; white-space:normal}
+    .slider-item-2-container ul li {display:inline; margin:0}
+    .slider-item-2-container ul li.slider-item-2-tablet-row {display:block}
+    .slider-item-2-container ul li.slider-item-2-tablet-sep::before {content:" I "; display:inline}
+    .slider-item-2-btn {margin:20px 0 0 0}
+    .slider-item-2-btn .btn {height:57px; line-height:57px; font-size:42px}
+}
+
+@media screen and (max-width:767px) {
+    .slider-item-2-headers {top:694px; font-size:22px; line-height:27px}
+    .slider-item-2-container {padding:56px 0 0 10px}
+    .slider-item-2-right {margin:30px 0 0 0}
+    .slider-item-2-logo img {height:34px}
+    .slider-item-2-container ul {margin:9px 0 0 0; font-size:17px; line-height:20px; white-space:normal}
+    .slider-item-2-btn {margin:10px 0 0 0}
+    .slider-item-2-btn .btn {height:39px; line-height:39px; font-size:20px; padding:0; text-align:center; width:104px}
+}
+
+.slider-item-3-btn {position:absolute; left:0; bottom:144px; right:0; text-align:center}
+.slider-item-3-btn .btn {height:66px; line-height:66px; padding:0; width:272px; font-size:57px; background:#000; text-transform:uppercase}
+.slider-item-3-mobile {display:none}
+.slider-item-3 {position:absolute; left:0; bottom:0; right:0; background:#202124; height:123px; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:26px 0 0 0}
+.slider-item-3-item {display:inline-block; vertical-align:middle; font-size:24px; line-height:30px; letter-spacing:0; margin:0 0 0 55px}
+.slider-item-3-item:first-child {margin:0}
+.slider-item-3-item img {display:inline-block; vertical-align:middle; margin:-2px 20px 0 0}
+
+@media screen and (min-width:1240px) and (max-width:1440px) {
+    .slider-item-3-btn {left:160px; bottom:89px}
+    .slider-item-3-btn .btn {height:50px; line-height:50px; padding:0; font-size:24px; width:125px; text-align:center}
+    .slider-item-3 {height:76px; padding:18px 0 0 0}
+    .slider-item-3-item {font-size:18px; line-height:25px; margin:0 0 0 40px}
+    .slider-item-3-item:first-child {margin:0}
+    .slider-item-3-item img {height:25px; margin:-2px 10px 0 0}
+}
+
+@media screen and (max-width:1239px) {
+    .slider-item-3-mobile {display:block; position:absolute; left:17px; top:213px; right:17px; font-size:0; line-height:0; font-weight:500; color:#000; border-bottom:1px solid #000; padding:0 0 11px 0; letter-spacing:-1px; text-align:center}
+    .slider-item-3-mobile-item {display:inline-block; vertical-align:top; margin:0 0 0 33px; padding:0 0 0 33px; border-left:1px solid #000; font-size:24px; line-height:28px; letter-spacing:0; text-align:left}
+    .slider-item-3-mobile-item:first-child {margin:0; padding:0; border-left:none}
+    .slider-item-3 {height:93px; padding:27px 0 0 0; line-height:0; font-size:0; text-align:left}
+    .slider-item-3::before {content:""; display:block; position:absolute; left:193px; top:40px; right:34px; height:2px; background:#4b4c4d; border-radius:2px}
+    .slider-item-3-item {font-size:0; line-height:0; margin:0 0 0 20px}
+    .slider-item-3-item:first-child {margin:0 0 0 34px}
+    .slider-item-3-item img {margin:0; height:28px}
+    .slider-item-3-btn {bottom:128px; text-align:center}
+    .slider-item-3-btn .btn {height:57px; line-height:57px; font-size:42px; width:410px; padding:0; text-align:center}
+}
+
+@media screen and (max-width:767px) {
+    .slider-item-3-mobile {left:20px; top:202px; right:20px; padding:0 0 5px 0}
+    .slider-item-3-mobile-item {margin:0 0 0 22px; font-size:14px; line-height:16px; padding:0 0 0 22px}
+    .slider-item-3-mobile-item:first-child {margin:0; padding:0}
+    .slider-item-3 {height:59px; padding:17px 0 0 0}
+    .slider-item-3::before {left:123px; top:27px; right:20px}
+    .slider-item-3-item {margin:0 0 0 13px}
+    .slider-item-3-item:first-child {margin:0 0 0 20px}
+    .slider-item-3-item img {height:18px}
+    .slider-item-3-btn {bottom:77px}
+    .slider-item-3-btn .btn {height:47px; line-height:47px; font-size:30px}
+}
+
+.links {margin:75px 30px 0 30px; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
+.links-inner {margin:0 -10px}
+.links-item {display:inline-block; vertical-align:top; width:33.33%; padding:0 10px}
+.links-item a {display:block; height:316px; border-radius:12px; text-decoration:none; position:relative; color:#fff}
+.links-item a::before {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:linear-gradient(0deg, #180570 0%, #6e3bff 100%); border-radius:12px; opacity:0.57}
+.links-item-img {position:absolute; left:0; bottom:0; right:0; text-align:center}
+.links-item-img-mobile {display:none}
+.links-item-title {display:table; width:100%; position:absolute; left:0; bottom:0}
+.links-item-title span {display:table-cell; vertical-align:middle; height:73px; border-radius:0 0 12px 12px; font-weight:bold; font-size:28px; line-height:28px; letter-spacing:0; background:linear-gradient(0deg, #6537e9 0%, #958dff 100%); transition:background 0.2s}
+@media screen and (min-width:1240px) {
+    .links-item a:hover .links-item-title span {background:linear-gradient(0deg, #ff4578 0%, #ff902f 100%)}
+}
+
+@media screen and (max-width:1239px) {
+    .links {margin:70px 0 0 0; text-align:left}
+    .links-inner {margin:0}
+    .links-item {display:block; width:auto; padding:0; margin:66px 0 0 0}
+    .links-item a {height:120px}
+    .links-item a::before {opacity:1; background:linear-gradient(0deg, #722df3 0%, #9888ff 100%)}
+    .links-item-img {display:none}
+    .links-item-img-mobile {display:block; position:absolute; left:34px; bottom:0; line-height:0}
+    .links-item-img-mobile img {display:block; width:160px}
+    .links-item-title {display:block; width:auto; left:231px; right:75px; bottom:auto; top:52px}
+    .links-item-2 .links-item-title {top:59px}
+    .links-item-3 .links-item-title {top:67px}
+    .links-item-title span {display:block; height:auto; border-radius:0; font-size:26px; line-height:27px; background:none}
+}
+
+@media screen and (max-width:767px) {
+    .links {margin:50px 0 0 0}
+    .links-item {margin:50px 0 0 0}
+    .links-item a {height:90px}
+    .links-item-img-mobile {left:20px}
+    .links-item-img-mobile img {width:132px}
+    .links-item-title {left:174px; right:0; top:40px}
+    .links-item-2 .links-item-title {top:40px}
+    .links-item-3 .links-item-title {top:40px}
+    .links-item-title span {font-size:21px; line-height:22px}
+}
+
+.realme-gt {padding:56px 0 0 0}
+.realme-gt-img {line-height:0}
+.realme-gt-img img {display:block; width:100%; border-radius:12px 12px 0 0}
+.realme-gt-content {background:#fff; border-radius:0 0 12px 12px; padding:0 0 16px 0}
+.realme-gt-content::after {content:""; display:block; clear:both}
+.realme-gt-info {float:left; width:914px; padding:31px 0 0 50px}
+.realme-gt-title {font-weight:bold; font-size:44px; line-height:51px; color:#000}
+.realme-gt-title img {display:inline-block; vertical-align:top; height:51px; margin:-4px 28px 0 0}
+.realme-gt-props {display:table; margin:15px 0 0 -99px; border-collapse:separate; border-spacing:99px 7px}
+.realme-gt-props-row {display:table-row}
+.realme-gt-props-item {display:table-cell; vertical-align:middle; width:345px; height:50px; border:2px solid #020626; font-weight:500; font-size:26px; line-height:29px; color:#000; letter-spacing:-0.025em; text-align:center; padding:5px 0}
+.realme-gt-buy {float:right; width:286px; padding:185px 0 0 0}
+.realme-gt-btn .btn {height:50px; line-height:50px; width:200px; text-align:center; font-size:42px; padding:0}
+.realme-gt-notice {float:left; width:100%; font-size:20px; line-height:20px; font-style:italic; color:#000; padding:15px 0 0 50px}
+
+@media screen and (max-width:1239px) {
+    .realme-gt {padding:60px 0 0 0; width:700px; margin:0 auto}
+    .realme-gt-img {height:349px; border-radius:10px 10px 0 0; position:relative; overflow:hidden}
+    .realme-gt-img img {display:block; width:auto; border-radius:0; height:349px; position:relative; left:50%; transform:translateX(-50%)}
+    .realme-gt-content {background:#fff; border-radius:0 0 10px 10px; padding:30px 20px 26px 20px}
+    .realme-gt-info {float:none; width:auto; padding:0}
+    .realme-gt-title {font-size:30px; line-height:30px}
+    .realme-gt-title img {height:43px; margin:-8px 21px 0 0; vertical-align:middle}
+    .realme-gt-props {margin:25px -8px 0 -8px; border-collapse:separate; border-spacing:8px}
+    .realme-gt-props-item {width:50%; font-size:20px; line-height:21px; padding:0; border-width:1px; vertical-align:middle; height:64px}
+    .realme-gt-buy {float:none; width:auto; padding:20px 0 0 0; text-align:center; font-size:0; line-height:0; letter-spacing:-1px}
+    .realme-gt-price {display:inline-block; vertical-align:top; font-size:60px; line-height:63px; letter-spacing:-0.02em}
+    .realme-gt-price span {font-size:30px}
+    .realme-gt-priceold {display:inline-block; vertical-align:top; font-size:30px; line-height:32px; margin:26px 0 0 20px}
+    .realme-gt-btn {display:inline-block; vertical-align:top; margin:0 0 0 20px}
+}
+
+@media screen and (max-width:767px) {
+    .realme-gt {padding:35px 0 0 0; width:438px}
+    .realme-gt-img {height:219px}
+    .realme-gt-img img {height:219px}
+    .realme-gt-content {padding:14px 10px 30px 15px}
+    .realme-gt-title {font-size:32px; line-height:32px}
+    .realme-gt-title img {display:block; height:32px; margin:0 0 11px 0}
+    .realme-gt-props {margin:8px -5px 0 -5px; border-spacing:5px 8px}
+    .realme-gt-props-item {font-size:17px; line-height:18px; height:44px}
+    .realme-gt-buy {padding:24px 0 0 0}
+    .realme-gt-price {font-size:47px; line-height:49px}
+    .realme-gt-price span {font-size:26px}
+    .realme-gt-priceold {font-size:20px; line-height:21px; margin:23px 0 0 8px}
+    .realme-gt-btn {margin:0 0 0 15px}
+}
+
+.realme-8 {padding:145px 0 0 0}
+.realme-8-title {height:182px; background:#0a0014; position:relative; border-radius:12px; cursor:default}
+.realme-8-title-text {position:absolute; left:30px; top:-28px; font-weight:bold; font-size:243px; line-height:243px; color:#0a0014; text-shadow:0 2px 0 #d5bb71, 2px 0 0 #d5bb71, 0 -2px 0 #d5bb71, -2px 0 0 #d5bb71; text-transform:uppercase}
+.realme-8-title-photo {line-height:0; position:absolute; right:6px; bottom:0}
+
+@media screen and (max-width:1239px) {
+    .realme-8 {padding:99px 0 0 0}
+    .realme-8-title {height:113px; border-radius:10px; background:#000 url(../images/realme-8-title-tablet.svg) no-repeat 32px 0}
+    .realme-8-title-text {display:none}
+    .realme-8-title-photo {right:0}
+    .realme-8-title-photo img {width:175px}
+}
+
+@media screen and (max-width:767px) {
+    .realme-8 {padding:95px 0 0 0}
+    .realme-8-title {height:74px; margin:0 -20px; border-radius:0; background-position:20px top; background-size:auto 74px}
+    .realme-8-title-photo img {width:140px}
+}
+
+.realme-8pro {margin:39px 0 0 0; height:640px; position:relative; background:url(../images/realme-8pro.jpg) no-repeat center; border-radius:16px}
+.realme-8pro-content {position:absolute; left:618px; top:198px}
+.realme-8pro-content-title {font-size:0; line-height:0; letter-spacing:-1px}
+.realme-8pro-content-title img {display:inline-block; vertical-align:top}
+.realme-8pro-logo {height:56px}
+.realme-8pro-infinity {height:37px; margin:13px 0 0 23px}
+.realme-8pro-text {font-size:30px; line-height:40px; font-weight:500; color:#f4fdff; margin:13px 0 0 0}
+.realme-8pro-buy-btn {margin:130px 0 0 0; text-align:right}
+.realme-8pro-slider {position:absolute; left:213px; top:195px; width:171px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; overflow:hidden; border-radius:12px}
+.realme-8pro-slider.slick-initialized {overflow:visible}
+.realme-8pro-slider::after {content:""; display:block; position:absolute; left:11px; top:7px; width:11px; height:11px; background:url(../images/realme-8pro-slider.png) no-repeat; pointer-events:none}
+.realme-8pro-slider-item {display:inline-block; vertical-align:top; width:100%}
+.realme-8pro-slider-item-inner {height:375px; position:relative}
+.realme-8pro-slider-item-bg {position:absolute; left:0; top:0; bottom:0; right:0; background:no-repeat center; background-size:cover; border-radius:12px}
+.realme-8pro-slider .slick-dots {margin:0; padding:0; list-style:none; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; position:absolute; left:0; bottom:-39px; right:0}
+.realme-8pro-slider .slick-dots li {margin:0 0 0 3px; padding:0; display:inline-block; vertical-align:top; position:relative}
+.realme-8pro-slider .slick-dots li::before {display:none}
+.realme-8pro-slider .slick-dots li:first-child {margin:0}
+.realme-8pro-slider .slick-dots li button {display:block; position:relative; width:48px; height:4px; border-radius:2px; border:none; background:#959595; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
+.realme-8pro-slider .slick-dots li button::after {content:""; display:block; position:absolute; left:0; top:0; width:0; bottom:0; border-radius:2px; background:#fbe44d}
+.realme-8pro-slider .slick-dots li button.active::after {width:100%; transition:width 5s linear}
+
+@media screen and (max-width:1239px) {
+    .realme-8pro {margin:41px auto 0 auto; width:700px; height:400px; background:url(../images/realme-8pro-tablet.jpg) no-repeat; border-radius:10px}
+    .realme-8pro-content {position:absolute; left:330px; top:103px; right:0}
+    .realme-8pro-logo {height:35px}
+    .realme-8pro-infinity {height:28px; margin:8px 0 0 10px}
+    .realme-8pro-text {font-size:24px; line-height:29px; margin:22px 0 0 0}
+    .realme-8pro-buy {margin:14px 0 0 0}
+    .realme-8pro-buy-btn {margin:10px 0 0 0}
+    .realme-8pro-slider {left:110px; top:120px; width:97px; border-radius:10px}
+    .realme-8pro-slider::after {left:7px; top:4px; width:5px; height:5px; background-size:100% 100%; border-radius:50%}
+    .realme-8pro-slider-item-inner {height:213px}
+    .realme-8pro-slider-item-bg {border-radius:10px}
+    .realme-8pro-slider .slick-dots {bottom:-30px; right:-100px; left:-100px}
+    .realme-8pro-slider .slick-dots li {margin:0 0 0 5px}
+    .realme-8pro-slider .slick-dots li:first-child {margin:0}
+    .realme-8pro-slider .slick-dots li button {width:46px; height:3px}
+}
+
+@media screen and (max-width:767px) {
+    .realme-8pro {margin:40px auto 0 auto; width:440px; height:609px; background:url(../images/realme-8pro-mobile.jpg) no-repeat center}
+    .realme-8pro-content {left:0; top:408px; text-align:center}
+    .realme-8pro-logo {height:36px}
+    .realme-8pro-infinity {height:28px; margin:9px 0 0 15px}
+    .realme-8pro-text {font-size:20px; line-height:24px; margin:11px 0 0 0}
+    .realme-8pro-buy {margin:15px 0 0 0}
+    .realme-8pro-buy-btn {display:inline-block; vertical-align:top; margin:0 0 0 19px}
+    .realme-8pro-slider {left:172px; top:134px; width:100px; border-radius:10px}
+    .realme-8pro-slider::after {left:6px; top:4px; width:6px; height:6px; background-size:100% 100%; border-radius:50%}
+    .realme-8pro-slider-item-inner {height:220px}
+    .realme-8pro-slider-item-bg {border-radius:10px}
+}
+
+.realme-8-item {margin:32px 0 0 0; height:640px; position:relative; background:url(../images/realme-8-item.jpg) no-repeat center; border-radius:16px}
+.realme-8-content {position:absolute; left:107px; top:198px}
+.realme-8-content-title {font-size:0; line-height:0; letter-spacing:-1px}
+.realme-8-content-title img {display:inline-block; vertical-align:top}
+.realme-8-logo {height:56px}
+.realme-8-text {font-size:30px; line-height:40px; font-weight:500; color:#f4fdff; margin:16px 0 0 0}
+.realme-8-buy-btn {margin:130px 0 0 0}
+
+@media screen and (max-width:1239px) {
+    .realme-8-item {margin:42px auto 0 auto; width:700px; height:400px; background:url(../images/realme-8-item-tablet.jpg) no-repeat center; border-radius:10px}
+    .realme-8-content {position:absolute; left:46px; top:102px}
+    .realme-8-logo {height:35px}
+    .realme-8-text {font-size:24px; line-height:29px; margin:23px 0 0 0; letter-spacing:-0.02em}
+    .realme-8-buy {margin:14px 0 0 0}
+    .realme-8-buy-btn {margin:10px 0 0 0}
+}
+
+@media screen and (max-width:767px) {
+    .realme-8-item {margin:34px auto 0 auto; width:440px; height:604px; background:url(../images/realme-8-item-mobile.jpg) no-repeat center}
+    .realme-8-content {position:absolute; left:0; top:387px; right:0; text-align:center}
+    .realme-8-logo {height:37px}
+    .realme-8-text {font-size:20px; line-height:24px; margin:11px 0 0 0}
+    .realme-8-buy {margin:18px 0 0 0}
+    .realme-8-buy-btn {display:inline-block; vertical-align:top; margin:0 0 0 19px}
+}
+
+.realme-8-video {margin:16px -10px 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
+.realme-8-video-item {display:inline-block; vertical-align:top; width:33.33%; padding:20px 10px 0 10px}
+.realme-8-video-item a {display:block; text-decoration:none; color:#fff}
+.realme-8-video-item-preview {height:212px; position:relative; background:no-repeat center; background-size:cover; border-radius:12px 12px 0 0}
+.realme-8-video-item-preview::before {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; border-radius:12px 12px 0 0; background:rgba(3, 3, 3, 0.4)}
+.realme-8-video-item-preview::after {content:""; display:block; width:48px; height:48px; background:url(../images/realme-8-video-icon.svg) no-repeat; background-size:100%; position:absolute; left:50%; top:50%; margin:-24px 0 0 -24px}
+.realme-8-video-item-title {display:table; width:100%}
+.realme-8-video-item-title span {display:table-cell; vertical-align:middle; height:70px; border-radius:0 0 12px 12px; font-weight:bold; font-size:34px; line-height:34px; letter-spacing:0; background:linear-gradient(0deg, #6537e9 0%, #958dff 100%); text-align:center}
+@media screen and (min-width:1240px) {
+    .realme-8-video-item a:hover .realme-8-video-item-title span {background:linear-gradient(0deg, #ff4578 0%, #ff902f 100%)}
+}
+
+@media screen and (max-width:1239px) {
+    .realme-8-video {margin:30px -5px 0 -5px}
+    .realme-8-video-item {padding:10px 5px 0 5px}
+    .realme-8-video-item-preview {height:213px; border-radius:10px 10px 0 0}
+    .realme-8-video-item-preview::before {border-radius:10px 10px 0 0}
+    .realme-8-video-item-preview::after {width:44px; height:44px; margin:-22px 0 0 -22px}
+    .realme-8-video-item-title span {height:72px; font-size:24px; line-height:25px; padding:0 10px; border-radius:0 0 10px 10px}
+}
+
+@media screen and (max-width:767px) {
+    .realme-8-video {margin:15px -3px 0 -3px}
+    .realme-8-video-item {padding:6px 3px 0 3px}
+    .realme-8-video-item-preview {height:167px}
+    .realme-8-video-item-title span {height:43px; font-size:18px; line-height:16px; font-weight:600; padding:0 10px}
+}
+
+.realme-c {padding:201px 0 0 0}
+.realme-c-title {height:188px; background:#7189d3; position:relative; border-radius:12px; cursor:default}
+.realme-c-title-text {position:absolute; left:5px; top:-28px; font-weight:bold; font-size:243px; letter-spacing:-0.02em; line-height:243px; color:#7189d3; text-shadow:0 2px 0 #0d0152, 2px 0 0 #0d0152, 0 -2px 0 #0d0152, -2px 0 0 #0d0152; text-transform:uppercase}
+.realme-c-title-photo {line-height:0; position:absolute; right:-84px; bottom:0}
+.realme-c-title-bottom {position:absolute; left:0; bottom:0; right:0; height:21px; background:#2c50c5; border-radius:0 0 12px 12px; color:#b2caff; font-weight:600; font-size:14px; line-height:21px; letter-spacing:0.03em; text-align:center}
+
+@media screen and (max-width:1239px) {
+    .realme-c {padding:106px 0 0 0}
+    .realme-c-title {height:121px; border-radius:10px; background:#7189d3 url(../images/realme-c-title-tablet.svg) no-repeat 4px top}
+    .realme-c-title-text {display:none}
+    .realme-c-title-photo {right:-48px; bottom:16px}
+    .realme-c-title-photo img {width:270px}
+    .realme-c-title-bottom {height:16px; border-radius:0 0 10px 10px; font-size:8px; line-height:16px; white-space:nowrap}
+}
+
+@media screen and (max-width:767px) {
+    .realme-c {padding:84px 0 0 0}
+    .realme-c-title {height:73px; margin:0 -20px; border-radius:0; background:#7189d3}
+    .realme-c-title-text {display:block; left:20px; top:-10px; font-size:97px; line-height:97px}
+    .realme-c-title-photo {right:-32px; bottom:0}
+    .realme-c-title-photo img {width:184px}
+    .realme-c-title-bottom {height:9px; border-radius:0; font-size:5.5px; line-height:9px; white-space:nowrap}
+}
+
+.realme-c25 {padding:63px 0 0 0}
+.realme-c25-img {line-height:0}
+.realme-c25-img img {display:block; width:100%; border-radius:12px 12px 0 0}
+.realme-c25-content {background:#fff; border-radius:0 0 12px 12px; padding:0 0 51px 0}
+.realme-c25-content::after {content:""; display:block; clear:both}
+.realme-c25-info {float:left; width:914px; padding:44px 0 0 74px}
+.realme-c25-title {font-size:0; line-height:0; letter-spacing:-1px}
+.realme-c25-title img {display:inline-block; vertical-align:top; height:48px}
+.realme-c25-text {font-size:30px; line-height:35px; color:#000; font-weight:500; margin:27px 0 0 0}
+.realme-c25-buy {float:right; width:286px; padding:37px 0 0 0}
+.realme-c25-btn {margin:10px 0 0 0}
+
+@media screen and (max-width:1239px) {
+    .realme-c25 {padding:0; width:700px; margin:40px auto 0 auto; position:relative}
+    .realme-c25-img {height:320px; border-radius:10px 10px 0 0; position:relative; overflow:hidden}
+    .realme-c25-img img {display:block; width:auto; border-radius:0; height:320px; position:relative; left:50%; transform:translateX(-50%)}
+    .realme-c25-content {padding:30px 20px 30px 20px}
+    .realme-c25-info {width:380px; padding:0}
+    .realme-c25-title img {height:40px}
+    .realme-c25-text {margin:20px 0 0 0; font-size:24px; line-height:29px}
+    .realme-c25-buy {width:245px; padding:0; margin:-2px 0 0 0}
+    .realme-c25-buy::after {content:""; display:block; clear:both}
+    .realme-c25-btn {float:left; margin:8px 0 0 0; width:100%}
+    .realme-c25-btn .btn {width:100%; padding:0; text-align:center}
+}
+
+@media screen and (max-width:767px) {
+    .realme-c25 {padding:0; width:440px; margin:30px auto 0 auto; position:relative}
+    .realme-c25-img {height:237px; border-radius:12px 12px 0 0; position:relative; overflow:hidden}
+    .realme-c25-img img {display:block; width:auto; border-radius:0; height:237px; position:relative; left:50%; transform:translateX(-50%)}
+    .realme-c25-content {padding:15px 0 30px 15px}
+    .realme-c25-info {float:none; width:auto; padding:0}
+    .realme-c25-title img {height:30px}
+    .realme-c25-text {margin:10px 0 0 0; font-size:20px; line-height:24px}
+    .realme-c25-buy {float:none; width:auto; padding:22px 0 0 0; margin:0 -15px 0 0}
+    .realme-c25-buy::after {content:""; display:block; clear:both}
+    .realme-c25-btn {float:left; margin:0 0 0 15px; width:auto}
+    .realme-c25-btn .btn {width:auto; padding:0 16px}
+}
+
+.realme-c-video {position:relative; height:510px; margin:22px 0 0 0}
+.realme-c-video-link {display:block; border-radius:12px; position:absolute; left:0; top:0; right:0; bottom:0; color:#fff; text-align:center; text-decoration:none}
+.realme-c-video.start .realme-c-video-link {display:none}
+.realme-c-video-bg {position:absolute; left:0; top:0; right:0; bottom:0; border-radius:12px; background:url(../images/realme-c-video.jpg) no-repeat center; background-size:cover}
+.realme-c-video-bg::before {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; border-radius:12px; background:rgba(3, 3, 3, 0.4)}
+.realme-c-video-title {position:absolute; left:0; top:207px; right:0; font-weight:bold; font-size:30px; line-height:30px; letter-spacing:-0.025em}
+.realme-c-video-title::before {content:""; display:block; width:71px; height:71px; background:url(../images/realme-c-video.png) no-repeat; margin:0 auto 24px auto}
+@media screen and (min-width:1240px) {
+    .realme-c-video-link:hover .realme-c-video-title::before {background-position:left -71px}
+}
+.realme-c-video-player {display:none; position:absolute; left:0; top:0; right:0; bottom:0}
+.realme-c-video.start .realme-c-video-player {display:block}
+.realme-c-video-player iframe {position:absolute; left:0; top:0; width:100%; height:100%}
+
+@media screen and (max-width:1239px) {
+    .realme-c-video {margin:40px auto 0 auto; width:700px; height:339px}
+    .realme-c-video-title {top:138px; font-size:24px; line-height:29px}
+    .realme-c-video-title::before {width:60px; height:60px; margin:0 auto 20px auto; background-size:100%}
+}
+
+@media screen and (max-width:767px) {
+    .realme-c-video {margin:18px auto 0 auto; width:440px; height:204px}
+    .realme-c-video-title {top:73px; font-size:18px; line-height:18px}
+    .realme-c-video-title::before {width:37px; height:37px; margin:0 auto 13px auto}
+}
+
+.realme-c21-list {margin:19px -15px 0 -15px; font-size:0; line-height:0; letter-spacing:-1px}
+.realme-c21-item {display:inline-block; vertical-align:top; width:50%; padding:30px 15px 0 15px}
+.realme-c21-item-inner {position:relative}
+.realme-c21-item-preview {height:486px; position:relative; border-radius:12px 12px 0 0; background:linear-gradient(0deg, #4343d2 0%, #9bcaff 100%); overflow:hidden}
+.realme-c21-item-preview img {display:block; position:absolute; left:50%; bottom:0; transform:translateX(-50%)}
+.realme-c21-item-preview-tablet {display:none}
+.realme-c21-item-preview-mobile {display:none}
+.realme-c21-item-content {padding:30px 0 30px 40px; background:#fff; border-radius:0 0 12px 12px}
+.realme-c21-item-title {font-size:0; line-height:0; letter-spacing:-1px}
+.realme-c21-item-title img {display:inline-block; vertical-align:top; height:43px}
+.realme-c21-item-title span {display:inline-block; vertical-align:top; margin:7px 0 0 17px; height:38px; padding:0 13px; border:1px solid #0635f8; border-radius:5px; font-weight:600; font-size:29px; line-height:36px; letter-spacing:-0.025em; color:#0635f8}
+.realme-c21-item-text {font-weight:500; font-size:30px; line-height:27px; letter-spacing:0; color:#040403; margin:10px 0 0 0}
+.realme-c21-item-buy {padding:20px 0 0 0}
+.realme-c21-item-btn {text-align:center; padding:0 40px 0 0}
+.realme-c21-item-btn .btn {height:54px; font-size:40px; line-height:54px; padding:0 23px}
+
+@media screen and (max-width:1239px) {
+    .realme-c21-list {margin:40px 0 0 0}
+    .realme-c21-item {display:block; width:auto; padding:0; margin:40px 0 0 0}
+    .realme-c21-item-inner {height:400px}
+    .realme-c21-item-inner::after {content:""; display:block; clear:both}
+    .realme-c21-item-preview {display:none}
+    .realme-c21-item-preview-tablet {display:block; position:relative; float:left; width:268px; height:400px; border-radius:10px 0 0 10px; background:linear-gradient(180deg, #8ec9ff 0%, #493fdb 100%); overflow:hidden}
+    .realme-c21-item-preview-tablet img {display:block; position:absolute; left:50%; top:111px; transform:translateX(-50%)}
+    .realme-c21-item-content {float:left; width:calc(100% - 268px); height:400px; padding:78px 42px 0 42px; position:relative; border-radius:0 10px 10px 0}
+    .realme-c21-item-title img {height:42px}
+    .realme-c21-item-title span {position:absolute; left:42px; top:40px; margin:0; height:31px; padding:0; width:100px; text-align:center; font-size:24px; line-height:29px; letter-spacing:-0.02em}
+    .realme-c21-item-text {font-size:24px; line-height:26px; color:#000; margin:21px 0 0 0}
+    .realme-c21-item-buy {padding:23px 0 0 0}
+    .realme-c21-item-btn {width:100%; margin:0}
+    .realme-c21-item-btn .btn {height:57px; font-size:42px; line-height:57px; padding:0 30px}
+}
+
+@media screen and (max-width:767px) {
+    .realme-c21-list {margin:32px 0 0 0}
+    .realme-c21-item {margin:16px 0 0 0}
+    .realme-c21-item-inner {height:250px}
+    .realme-c21-item-preview-tablet {display:none}
+    .realme-c21-item-preview-mobile {display:block; position:relative; float:left; width:203px; height:250px; border-radius:12px 0 0 12px; background:linear-gradient(0deg, #4343d2 0%, #9bcaff 100%); overflow:hidden}
+    .realme-c21-item-preview-mobile img {display:block; position:absolute; left:50%; top:58px; transform:translateX(-50%)}
+    .realme-c21-item-content {float:left; width:calc(100% - 203px); height:250px; padding:48px 0 0 22px; position:relative; border-radius:0 12px 12px 0}
+    .realme-c21-item-title img {height:28px}
+    .realme-c21-item-title span {position:absolute; left:22px; top:20px; margin:0; height:22px; padding:0 7px; font-size:17px; line-height:20px}
+    .realme-c21-item-text {font-size:17px; line-height:19px; margin:10px 0 0 0}
+    .realme-c21-item-buy {padding:10px 0 0 0}
+    .realme-c21-item-btn {width:100%; margin:0}
+    .realme-c21-item-btn .btn {height:36px; font-size:24px; line-height:36px; padding:0 24px}
+}
+
+.realme-c11 {margin:52px 0 0 0; height:514px; background:#fff; border-radius:12px; position:relative}
+.realme-c11-img {position:absolute; left:0; top:0; line-height:0}
+.realme-c11-img-tablet {display:none}
+.realme-c11-img-mobile {display:none}
+.realme-c11-content {position:absolute; left:614px; top:160px}
+.realme-c11-title {font-size:0; line-height:0; letter-spacing:-1px}
+.realme-c11-title img {display:inline-block; vertical-align:top; height:49px}
+.realme-c11-title span {display:inline-block; vertical-align:top; margin:10px 0 0 22px; height:36px; padding:0 10px; border:1px solid #020202; border-radius:5px; font-weight:600; font-size:33px; line-height:34px; letter-spacing:-0.01em; color:#020202}
+.realme-c11-text {font-weight:500; font-size:30px; line-height:27px; letter-spacing:0; color:#040403; margin:22px 0 0 0}
+.realme-c11-buy {padding:44px 0 0 0}
+.realme-c11-buy::after {content:""; display:block; clear:both}
+.realme-c11-btn {float:right; margin:-3px 0 0 0}
+
+@media screen and (max-width:1239px) {
+    .realme-c11 {margin:40px auto 0 auto; width:700px; height:338px; border-radius:10px}
+    .realme-c11-img {display:none}
+    .realme-c11-img-tablet {display:block; position:absolute; left:0; top:0; line-height:0}
+    .realme-c11-content {left:311px; top:36px}
+    .realme-c11-title img {height:41px}
+    .realme-c11-title span {margin:9px 0 0 22px; height:31px; font-size:20px; line-height:29px; font-weight:500; letter-spacing:-0.01em; padding:0; width:68px; text-align:center}
+    .realme-c11-text {font-size:24px; line-height:26px; margin:16px 0 0 0}
+    .realme-c11-buy {padding:22px 0 0 0}
+    .realme-c11-btn {width:100%; margin:0}
+}
+
+@media screen and (max-width:767px) {
+    .realme-c11 {margin:15px auto 0 auto; width:440px; height:250px}
+    .realme-c11-img-tablet {display:none}
+    .realme-c11-img-mobile {display:block; position:absolute; left:0; top:0; line-height:0}
+    .realme-c11-content {left:220px; top:53px}
+    .realme-c11-title img {height:23px}
+    .realme-c11-title span {margin:2px 0 0 12px; height:21px; font-size:16px; line-height:19px; letter-spacing:-0.02em; width:43px}
+    .realme-c11-text {font-size:17px; line-height:18px; margin:13px 0 0 0}
+    .realme-c11-buy {padding:10px 0 0 0}
+    .realme-c11-btn {width:100%; margin:0}
+    .realme-c11-btn .btn {height:36px; font-size:24px; line-height:36px; padding:0 24px}
+}
+
+.aiot {padding:159px 0 0 0}
+.aiot-title {height:212px; background:#01122e; position:relative; border-radius:12px; cursor:default}
+.aiot-title-text {position:absolute; right:0; top:-40px; font-weight:bold; font-size:299px; letter-spacing:0; line-height:299px; color:#01122e; text-shadow:0 2px 0 #d5bb71, 2px 0 0 #d5bb71, 0 -2px 0 #d5bb71, -2px 0 0 #d5bb71; text-transform:uppercase}
+.aiot-title-photo {line-height:0; position:absolute; left:39px; top:-10px}
+
+@media screen and (max-width:1239px) {
+    .aiot {padding:50px 0 0 0}
+    .aiot-title {height:127px; background:#01122e url(../images/aiot-title-tablet.svg) no-repeat right -2px; border-radius:10px 0 10px 10px}
+    .aiot-title-text {display:none}
+    .aiot-title-photo {left:12px; top:0; width:293px; height:127px; background:url(../images/aiot-title-tablet.png) no-repeat}
+    .aiot-title-photo img {display:none}
+}
+
+@media screen and (max-width:767px) {
+    .aiot {padding:71px 0 0 0}
+    .aiot-title {height:87px; background-size:auto 87px; margin:0 -20px; border-radius:0; background-position:right top}
+    .aiot-title-photo {width:200px; height:87px; background:url(../images/aiot-title-mobile.png) no-repeat}
+}
+
+.buds {margin:72px 0 0 0; border-radius:12px; height:436px; position:relative; background:#fff url(../images/buds-bg.png)}
+.buds-line {position:absolute; left:0; top:0; bottom:0; width:24px; border-radius:12px 0 0 12px; background:linear-gradient(0deg, #85ed9a 0%, #4091ff 100%)}
+.buds-photo {position:absolute; right:0; top:0; line-height:0}
+.buds-photo-tablet {display:none}
+.buds-photo-mobile {display:none}
+.buds-content {position:absolute; left:85px; top:105px}
+.buds-title {line-height:0}
+.buds-title img {height:45px}
+.buds-text {margin:17px 0 0 0; font-weight:500; font-size:30px; line-height:35px; letter-spacing:-0.025em; color:#000}
+.buds-buy {padding:38px 0 0 0}
+.buds-btn .btn {height:54px; font-size:41px; line-height:54px; padding:0 24px}
+
+@media screen and (max-width:1239px) {
+    .buds {margin:50px auto 0 auto; border-radius:10px; width:700px; height:400px; overflow:hidden}
+    .buds-line {width:21px; border-radius:10px 0 0 10px; background:linear-gradient(180deg, #1c95ff 0%, #56ee95 100%)}
+    .buds-photo {display:none}
+    .buds-photo-tablet {display:block; position:absolute; right:0; top:0; line-height:0}
+    .buds-content {left:52px; top:66px}
+    .buds-title img {height:29px}
+    .buds-text {font-size:24px; line-height:26px; letter-spacing:-0.02em; max-width:310px}
+    .buds-buy {padding:34px 0 0 0}
+    .buds-btn {width:100%; margin:0}
+    .buds-btn .btn {height:57px; font-size:42px; line-height:57px; padding:0 30px}
+}
+
+@media screen and (max-width:767px) {
+    .buds {margin:38px auto 0 auto; width:440px; height:213px}
+    .buds-line {width:13px; border-radius:0 10px 10px 0; left:auto; right:0; background:linear-gradient(180deg, #1c95ff 0%, #56ee95 100%)}
+    .buds-photo-tablet {display:none}
+    .buds-photo-mobile {display:block; position:absolute; right:0; top:0; line-height:0}
+    .buds-content {left:10px; top:35px}
+    .buds-title img {height:18px}
+    .buds-text {margin:13px 0 0 0; font-size:17px; line-height:19px; max-width:170px}
+    .buds-buy {padding:22px 0 0 0}
+    .buds-btn {width:auto; margin:0 0 0 10px}
+    .buds-btn .btn {height:36px; font-size:24px; line-height:36px; padding:0 16px}
+}
+
+.aiot-list {margin:7px 0 0 0; display:table; width:100%; border-collapse:separate; border-spacing:30px}
+.aiot-list-row {display:table-row}
+.aiot-list-item {display:table-cell; vertical-align:top; width:50%; background:#fff; border-radius:12px; position:relative; padding:0 0 132px 0}
+.aiot-list-item-preview {line-height:0}
+.aiot-list-item-preview img {display:block; width:100%; border-radius:12px 12px 0 0}
+.aiot-list-item-title {text-align:center; font-weight:bold; font-size:48px; line-height:48px; color:#040403; padding:27px 0 0 0}
+.aiot-list-item-text {text-align:center; font-weight:500; font-size:30px; line-height:32px; color:#040403; padding:6px 10px 0 10px}
+.aiot-list-item-buy {position:absolute; left:30px; bottom:35px; right:30px; text-align:center}
+.aiot-list-item-btn .btn {height:54px; font-size:40px; line-height:54px; padding:0 23px}
+
+@media screen and (max-width:1239px) {
+    .aiot-list {margin:42px 0 0 -20px; width:calc(100% + 40px); border-spacing:20px}
+    .aiot-list-item {border-radius:10px; padding:0 0 154px 0}
+    .aiot-list-item-preview img {border-radius:10px 10px 0 0}
+    .aiot-list-item-title {font-size:30px; line-height:30px; color:#000; padding:20px 0 0 0}
+    .aiot-list-item-text {font-size:24px; line-height:26px; color:#000; padding:16px 5px 0 5px}
+    .aiot-list-item-buy {position:absolute; left:28px; bottom:24px; right:28px}
+    .aiot-list-item-btn {width:100%; margin:12px 0 0 0}
+    .aiot-list-item-btn .btn {height:45px; font-size:36px; line-height:45px; padding:0; text-align:center; width:100%}
+}
+
+@media screen and (max-width:767px) {
+    .aiot-list {margin:8px 0 0 -10px; width:calc(100% + 20px); border-spacing:8px 10px}
+    .aiot-list-item {padding:0 0 103px 0}
+    .aiot-list-item-title {font-size:20px; line-height:20px; padding:11px 0 0 0}
+    .aiot-list-item-text {font-size:17px; line-height:19px; padding:6px 5px 0 5px}
+    .aiot-list-item-buy {left:20px; bottom:21px; right:20px}
+    .aiot-list-item-btn {margin:3px 0 0 0; text-align:center}
+    .aiot-list-item-btn .btn {height:36px; font-size:20px; line-height:36px; width:160px}
+}
+
+.up-link {display:none; width:50px; height:50px; position:fixed; right:68px; bottom:38px; z-index:98; background:url(../images/up-link.png) no-repeat; border-radius:50%; border:2px solid #fa3842; transition:background-color 0.2s}
+@media screen and (min-width:1240px) {
+    .up-link:hover {border-color:#ff8f30; background-position:left -46px}
+}
+.up-link.visible {display:block}
+
+@media screen and (max-width:1239px) {
+    .up-link {width:48px; height:48px; right:34px; bottom:34px; background:url(../images/up-link-tablet.svg) no-repeat center; border-color:#ff0f3b}
+}
+
+@media screen and (max-width:767px) {
+    .up-link {right:25px; bottom:25px}
+}
+
+.window-open,
+.window-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+.window {display:none; position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.75); z-index:99; text-align:center; overflow:auto}
+.window.visible {display:block}
+.window::before {content:""; display:inline-block; height:100%; vertical-align:middle}
+.window-container {display:inline-block; vertical-align:middle; position:relative; background:rgba(0, 0, 0, 0.85); border:3px solid #ff005a; border-radius:15px; margin:30px 0; width:1126px}
+.window-close {display:block; position:absolute; right:-32px; top:-29px; width:20px; height:20px; background:url(../images/window-close.png) no-repeat; transition:opacity 0.2s}
+@media screen and (min-width:1240px) {
+    .window-close:hover {opacity:0.8}
+}
+
+@media screen and (max-width:1239px) {
+    .window-container {width:694px; border:2px solid #ff0f3b; margin:70px 0}
+    .window-close {top:-52px; right:-2px; width:30px; height:30px; background:url(../images/window-close-tablet.svg) no-repeat}
+}
+
+@media screen and (max-width:767px) {
+    .window-container {width:426px}
+}
+
+.window-video-player {margin:20px; height:610px; position:relative}
+.window-video-player iframe {position:absolute; left:0; top:0; width:100%; height:100%}
+
+@media screen and (max-width:1239px) {
+    .window-video-player {height:400px}
+}
+
+@media screen and (max-width:767px) {
+    .window-video-player {height:300px}
+}
