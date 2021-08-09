@@ -19,6 +19,13 @@ $(document).ready(function() {
                 settings: {
                     arrows: false
                 }
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    arrows: false,
+                    dots: false
+                }
             }
         ]
     }).on('setPosition', function(event, slick) {

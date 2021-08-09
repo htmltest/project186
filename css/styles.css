@@ -56,6 +56,10 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     header.header-center {padding:49px 0 0 0}
 }
 
+@media screen and (max-width:479px) {
+    header.header-center {padding:10px 0 0 0}
+}
+
 .logo {display:block; float:left; width:271px; height:54px; margin:32px 0 0 -40px; background:url(../images/logo.svg) no-repeat; background-size:100%}
 .slider-item-inverse .logo {background-image:url(../images/logo-inverse.svg)}
 .logo-sep {float:left; width:2px; height:38px; background:#4c4d66; margin:45px 0 0 20px}
@@ -91,6 +95,16 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .slider-item-3-wrap .logo {width:155px; height:31px}
 }
 
+@media screen and (max-width:479px) {
+    header.header-center {text-align:center}
+    .logo-sep {display:none}
+    .dns-logo {display:block; margin:16px auto 0 auto}
+    .slider-item-2-wrap header {padding:15px 0 0 0}
+    .slider-item-2-wrap .logo {width:254px; height:50px}
+    .slider-item-3-wrap header {padding:10px 0 0 0}
+    .slider-item-3-wrap .logo {width:103px; height:21px; margin:0 -8px 0 0}
+}
+
 .slider {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; background:#020626}
 .slider-item {display:inline-block; vertical-align:top; width:100%}
 .slider-item-inner {height:793px; position:relative; overflow:hidden}
@@ -98,6 +112,7 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .slider-item-bg-desktop {display:none}
 .slider-item-bg-tablet {display:none}
 .slider-item-bg-mobile {display:none}
+.slider-item-bg-320 {display:none}
 .slider-item-content {position:relative}
 .slider .slick-prev,
 .slider .slick-next {display:block; position:absolute; z-index:2; top:50%; width:24px; height:40px; border:none; border-radius:0; margin:-20px 0 0 0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:none}
@@ -159,6 +174,12 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .slider .slick-dots li button {width:68px; height:3px}
 }
 
+@media screen and (max-width:479px) {
+    .slider-item-inner {height:660px}
+    .slider-item-bg-mobile {display:none}
+    .slider-item-bg-320 {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center bottom}
+}
+
 .slider-item-1 {float:left; text-align:center; margin:233px 0 0 -40px}
 .slider-item-1-title {font-weight:bold; font-size:78px; line-height:83px; letter-spacing:-0.01em; text-transform:uppercase}
 .slider-item-1-text {font-weight:500; font-size:27px; line-height:27px; letter-spacing:-0.025em; text-transform:uppercase; margin:24px 0 0 0}
@@ -183,6 +204,13 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .slider-item-1-text {margin:16px 0 0 0}
     .slider-item-1-super {font-size:29px; line-height:34px; margin:387px 0 0 0}
     .slider-item-1-notice {margin:0px 0 0 0; font-size:13px; line-height:13px}
+}
+
+@media screen and (max-width:479px) {
+    .slider-item-1-title {padding:133px 0 0 0; font-size:42px; line-height:45px}
+    .slider-item-1-text {line-height:21px; max-width:230px; margin:24px auto 0 auto; white-space:normal}
+    .slider-item-1-super {font-size:25px; line-height:31px; margin:264px 0 0 0}
+    .slider-item-1-notice {margin:15px 0 0 0}
 }
 
 .slider-item-2 {margin:0 -40px}
@@ -239,6 +267,15 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .slider-item-2-btn .btn {height:39px; line-height:39px; font-size:20px; padding:0; text-align:center; width:104px}
 }
 
+@media screen and (max-width:479px) {
+    .slider-item-2-headers {top:589px; font-size:16px; line-height:19px}
+    .slider-item-2-container {padding:93px 0 0 0; text-align:center}
+    .slider-item-2-right {margin:26px 0 0 0}
+    .slider-item-2-logo img {height:24px; margin:0 auto}
+    .slider-item-2-container ul {margin:9px 0 0 0; font-size:16px; line-height:15px}
+    .slider-item-2-btn .btn {height:24px; line-height:24px; width:97px}
+}
+
 .slider-item-3-btn {position:absolute; left:0; bottom:144px; right:0; text-align:center}
 .slider-item-3-mobile {display:none}
 .slider-item-3 {position:absolute; left:0; bottom:0; right:0; background:#202124; height:123px; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:26px 0 0 0}
@@ -279,6 +316,17 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .slider-item-3-item img {height:18px}
     .slider-item-3-btn {bottom:77px}
     .slider-item-3-btn .btn {height:47px; line-height:47px; font-size:30px}
+}
+
+@media screen and (max-width:479px) {
+    .slider-item-3-mobile {left:0; top:144px; right:0; padding:0; border-bottom:none; text-align:center}
+    .slider-item-3-mobile-item {margin:0; display:block; font-size:16px; line-height:16px; margin:10px 0 0 0; padding:0; border-left:none; text-align:center}
+    .slider-item-3-mobile-item br {display:none}
+    .slider-item-3-btn {bottom:71px}
+    .slider-item-3-btn .btn {height:24px; line-height:24px; width:97px; font-size:20px}
+    .slider-item-3 {height:37px; padding:11px 0 0 0}
+    .slider-item-3::before {left:83px; top:15px}
+    .slider-item-3-item img {height:9px}
 }
 
 .links {margin:75px 30px 0 30px; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
@@ -324,6 +372,14 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .links-item-title span {font-size:36px; line-height:41px; display:table-cell; height:106px; text-align:center; border-radius:0; background:linear-gradient(0deg, #6537e9 0%, #958dff 100%)}
 }
 
+@media screen and (max-width:479px) {
+    .links-item {margin:25px 0 0 0}
+    .links-item:first-child {margin:25px 0 0 0}
+    .links-item a {height:323px}
+    .links-item-img-480 img {height:254px}
+    .links-item-title span {font-size:25px; line-height:29px; height:73px}
+}
+
 .realme-gt {padding:56px 0 0 0}
 .realme-gt-img {line-height:0}
 .realme-gt-img img {display:block; width:100%; border-radius:12px 12px 0 0}
@@ -355,9 +411,9 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 
 @media screen and (max-width:767px) {
     .realme-gt {padding:0; width:auto; margin:0 -20px}
-    .realme-gt-img {height:226px}
+    .realme-gt-img {height:226px; border-radius:0}
     .realme-gt-img img {height:226px}
-    .realme-gt-content {padding:4px 0 10px 0; text-align:center}
+    .realme-gt-content {padding:4px 0 10px 0; text-align:center; border-radius:0}
     .realme-gt-title {font-size:23px; line-height:27px}
     .realme-gt-title img {height:27px; margin:-6px 10px 0 0}
     .realme-gt-props {display:block; margin:39px 60px 0 60px; border-spacing:0}
@@ -366,6 +422,19 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-gt-buy {padding:34px 0 0 0}
     .realme-gt-btn {margin:0}
     .realme-gt-notice {font-size:13px; line-height:16px; padding:20px 60px 0 60px}
+}
+
+@media screen and (max-width:479px) {
+    .realme-gt {padding:25px 0 0 0}
+    .realme-gt-img {height:180px}
+    .realme-gt-img img {height:180px}
+    .realme-gt-content {padding:15px 0}
+    .realme-gt-title {font-size:18px; line-height:18px}
+    .realme-gt-title img {display:block; height:22px; margin:0 auto 10px auto}
+    .realme-gt-props {margin:20px 20px 0 20px}
+    .realme-gt-props-item {font-size:21px; line-height:25px; margin:20px 0 0 0}
+    .realme-gt-buy {padding:20px 0 0 0}
+    .realme-gt-notice {padding:20px 5px 0 5px}
 }
 
 .gt-tv {margin:68px 0 0 0; position:relative; padding:43px 0 98px 39px}
@@ -389,10 +458,23 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 
 @media screen and (max-width:767px) {
     .gt-tv {margin:40px -20px 0 -20px; position:relative; padding:22px 0 85px 30px}
+    .gt-tv::before {border-radius:0}
     .gt-tv-list-item-text {font-size:26px; line-height:26px}
     .gt-tv-photo {position:relative; right:auto; top:auto; line-height:0; margin:16px 0 0 0; text-align:center}
     .gt-tv-photo img {width:auto; height:195px}
     .gt-tv-title {padding:0; height:50px; font-size:20px; line-height:50px; text-align:center}
+    .gt-tv-title::before {border-radius:0}
+}
+
+@media screen and (max-width:479px) {
+    .gt-tv {margin:23px -20px 0 -20px; position:relative; padding:23px 0 59px 15px}
+    .gt-tv-logo {padding:0 15px 0 0}
+    .gt-tv-logo img {height:22px; margin:0 auto}
+    .gt-tv-list {border-spacing:0 5px; margin:11px 0 0 0}
+    .gt-tv-list-item-icon img {height:18px}
+    .gt-tv-list-item-text {padding:0 0 0 10px; font-size:18px; line-height:18px}
+    .gt-tv-photo img {height:133px}
+    .gt-tv-title {height:35px; font-size:13px; line-height:35px}
 }
 
 .realme-8 {padding:145px 0 0 0}
@@ -413,6 +495,12 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-8-title {height:74px; margin:0 -20px; border-radius:0; background-position:20px top; background-size:auto 74px}
     .realme-8-title-photo img {width:140px}
     .realme-8-wrapper {margin:0 -20px}
+}
+
+@media screen and (max-width:479px) {
+    .realme-8 {padding:33px 0 0 0}
+    .realme-8-title {height:50px; background-position:left top; background-size:auto 50px}
+    .realme-8-title-photo img {width:90px}
 }
 
 .realme-8pro {margin:39px 0 0 0; height:640px; position:relative; background:url(../images/realme-8pro.jpg) no-repeat center; border-radius:16px}
@@ -470,6 +558,18 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-8pro-slider-item-bg {border-radius:10px}
 }
 
+@media screen and (max-width:479px) {
+    .realme-8pro {margin:18px auto 0 auto; width:320px; height:480px; background:url(../images/realme-8pro-320.png) no-repeat center; border-radius:0}
+    .realme-8pro-content {left:23px; right:23px; top:307px}
+    .realme-8pro-content-title {margin:0 -23px 0 0}
+    .realme-8pro-logo {height:32px}
+    .realme-8pro-infinity {height:22px; margin:8px 0 0 5px}
+    .realme-8pro-text {font-size:18px; line-height:22px; margin:16px 0 0 0}
+    .realme-8pro-buy {margin:20px 0 0 0}
+    .realme-8pro-slider {left:130px; top:83px; width:90px}
+    .realme-8pro-slider-item-inner {height:199px}
+}
+
 .realme-8-item {margin:32px 0 0 0; height:640px; position:relative; background:url(../images/realme-8-item.jpg) no-repeat center; border-radius:16px}
 .realme-8-content {position:absolute; left:107px; top:198px}
 .realme-8-content-title {font-size:0; line-height:0; letter-spacing:-1px}
@@ -494,6 +594,14 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-8-text {font-size:26px; line-height:32px; margin:25px 0 0 0}
     .realme-8-buy {margin:29px 0 0 0; text-align:center}
     .realme-8-buy-btn {display:inline-block; vertical-align:top; margin:0}
+}
+
+@media screen and (max-width:479px) {
+    .realme-8-item {margin:50px auto 0 auto; width:320px; height:539px; background:url(../images/realme-8-item-320.png) no-repeat center}
+    .realme-8-content {left:23px; top:340px; right:23px}
+    .realme-8-logo {height:35px}
+    .realme-8-text {font-size:18px; line-height:22px; margin:16px 0 0 0}
+    .realme-8-buy {margin:20px 0 0 0}
 }
 
 .realme-8-video {margin:16px -10px 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
@@ -526,6 +634,14 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-8-video-item-title span {height:80px; font-size:40px; line-height:80px; font-weight:bold; padding:0}
 }
 
+@media screen and (max-width:479px) {
+    .realme-8-video {margin:12px auto 0 auto; width:280px}
+    .realme-8-video-item {margin:14px 0 0 0}
+    .realme-8-video-item-preview {height:162px}
+    .realme-8-video-item-preview::after {width:38px; height:38px; margin:-19px 0 0 -19px}
+    .realme-8-video-item-title span {height:58px; font-size:25px; line-height:58px}
+}
+
 .realme-c {padding:201px 0 0 0}
 .realme-c-title {height:188px; background:#7189d3; position:relative; border-radius:12px; cursor:default}
 .realme-c-title-text {position:absolute; left:5px; top:-28px; font-weight:bold; font-size:243px; letter-spacing:-0.02em; line-height:243px; color:#7189d3; text-shadow:0 2px 0 #0d0152, 2px 0 0 #0d0152, 0 -2px 0 #0d0152, -2px 0 0 #0d0152; text-transform:uppercase}
@@ -548,6 +664,15 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-c-title-photo {right:-60px; bottom:0}
     .realme-c-title-photo img {width:184px}
     .realme-c-title-bottom {height:9px; border-radius:0; font-size:5.5px; line-height:9px; white-space:nowrap}
+}
+
+@media screen and (max-width:479px) {
+    .realme-c {padding:50px 0 0 0}
+    .realme-c-title {height:50px}
+    .realme-c-title-text {left:0; top:-6px; font-size:60px; line-height:60px}
+    .realme-c-title-bottom {height:6px; font-size:4px; line-height:6px}
+    .realme-c-title-photo {right:-20px}
+    .realme-c-title-photo img {width:120px}
 }
 
 .realme-c25 {padding:63px 0 0 0}
@@ -588,6 +713,15 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-c25-btn .btn {width:auto; padding:0 16px}
 }
 
+@media screen and (max-width:479px) {
+    .realme-c25-img {height:188px; width:320px}
+    .realme-c25-img img {height:188px}
+    .realme-c25-content {padding:22px 10px 25px 10px; width:320px}
+    .realme-c25-title img {height:37px}
+    .realme-c25-text {font-size:18px; line-height:22px}
+    .realme-c25-buy {padding:26px 0 0 0}
+}
+
 .realme-c-video {position:relative; height:510px; margin:22px 0 0 0}
 .realme-c-video-link {display:block; border-radius:12px; position:absolute; left:0; top:0; right:0; bottom:0; color:#fff; text-align:center; text-decoration:none}
 .realme-c-video.start .realme-c-video-link {display:none}
@@ -612,6 +746,12 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-c-video {margin:18px auto 0 auto; width:440px; height:192px}
     .realme-c-video-title {top:78px; font-size:11px; line-height:11px}
     .realme-c-video-title::before {width:27px; height:27px; margin:0 auto 8px auto}
+}
+
+@media screen and (max-width:479px) {
+    .realme-c-video {margin:23px auto 0 auto; width:280px; height:127px}
+    .realme-c-video-title {top:53px; font-size:8px; line-height:8px}
+    .realme-c-video-title::before {width:19px; height:19px; margin:0 auto 7px auto}
 }
 
 .realme-c21-list {margin:19px -15px 0 -15px; font-size:0; line-height:0; letter-spacing:-1px}
@@ -663,6 +803,21 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-c21-item-btn {width:100%; margin:0; padding:0; text-align:center}
 }
 
+@media screen and (max-width:479px) {
+    .realme-c21-list {margin:40px -20px 0 -20px}
+    .realme-c21-item {margin:34px 0 0 0}
+    .realme-c21-item:first-child {margin:0}
+    .realme-c21-item-inner {height:565px}
+    .realme-c21-item-preview-mobile {height:353px}
+    .realme-c21-item-preview-mobile img {height:280px}
+    .realme-c21-item-content {height:212px}
+    .realme-c21-item-title img {height:31px}
+    .realme-c21-item-title span {margin:3px 0 0 17px; height:32px; padding:0; width:73px; font-size:21px; line-height:30px}
+    .realme-c21-item-text {font-size:18px; line-height:28px}
+    .realme-c21-item-buy {padding:15px 0 0 0; text-align:center}
+    .realme-c21-item-btn .btn {height:40px; padding:0 20px; font-size:33px; line-height:40px}
+}
+
 .realme-c11 {margin:52px 0 0 0; height:514px; background:#fff; border-radius:12px; position:relative}
 .realme-c11-img {position:absolute; left:0; top:0; line-height:0}
 .realme-c11-img-tablet {display:none}
@@ -699,6 +854,16 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .realme-c11-btn {width:100%; margin:0; float:none}
 }
 
+@media screen and (max-width:479px) {
+    .realme-c11 {margin:34px -20px 0 -20px}
+    .realme-c11-img-mobile {padding:46px 0 0 0; margin:0 -20px}
+    .realme-c11-img-mobile img {max-width:100%}
+    .realme-c11-content {padding:29px 0 27px 0}
+    .realme-c11-title img {height:33px}
+    .realme-c11-title span {margin:7px 0 0 12px; height:26px; font-size:22px; line-height:24px; width:58px}
+    .realme-c11-text {font-size:18px; line-height:28px; margin:22px 0 0 0}
+}
+
 .aiot {padding:47px 0 0 0}
 .aiot-title {height:212px; background:#01122e; position:relative; border-radius:12px; cursor:default}
 .aiot-title-text {position:absolute; right:0; top:-40px; font-weight:bold; font-size:299px; letter-spacing:0; line-height:299px; color:#01122e; text-shadow:0 2px 0 #d5bb71, 2px 0 0 #d5bb71, 0 -2px 0 #d5bb71, -2px 0 0 #d5bb71; text-transform:uppercase}
@@ -718,6 +883,13 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .aiot-title {height:87px; background-size:auto 87px; margin:0 -20px; border-radius:0; background-position:right top}
     .aiot-title-photo {width:200px; height:87px; background:url(../images/aiot-title-mobile.png) no-repeat}
     .aiot-notice {text-align:center; font-size:13px; line-height:13px; padding:10px 0; margin:0 -20px}
+}
+
+@media screen and (max-width:479px) {
+    .aiot {padding:33px 0 0 0}
+    .aiot-title {height:60px; background-size:auto 60px}
+    .aiot-title-photo {width:134px; height:60px; background:url(../images/aiot-title-mobile.png) no-repeat; background-size:100%}
+    .aiot-notice {line-height:16px; padding:15px 0}
 }
 
 .buds {margin:62px 0 0 0; border-radius:12px; height:436px; position:relative; background:#fff url(../images/buds-bg.png)}
@@ -758,6 +930,17 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .buds-btn .btn {height:48px; font-size:35px; line-height:48px; padding:0 16px}
 }
 
+@media screen and (max-width:479px) {
+    .buds {height:348px}
+    .buds-photo-mobile {right:-49px}
+    .buds-photo-mobile img {width:270px}
+    .buds-content {top:154px}
+    .buds-title img {height:19px}
+    .buds-text {font-size:18px; line-height:27px}
+    .buds-buy {padding:22px 0 0 0}
+    .buds-btn .btn {height:40px; font-size:33px; line-height:40px; padding:0 20px}
+}
+
 .aiot-list {margin:7px 0 0 0; display:table; width:100%; border-collapse:separate; border-spacing:30px}
 .aiot-list-row {display:table-row}
 .aiot-list-item {display:table-cell; vertical-align:top; width:50%; background:#fff; border-radius:12px; position:relative; padding:0 0 113px 0}
@@ -789,6 +972,15 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .aiot-list-item-buy {left:auto; bottom:auto; right:auto; padding:17px 0 30px 0; position:relative}
     .aiot-list-item-btn {margin:0; text-align:center; float:none}
     .aiot-list-item-btn .btn {height:48px; font-size:35px; line-height:48px; width:auto; padding:0 16px}
+}
+
+@media screen and (max-width:479px) {
+    .aiot-list {padding:0 0 10px 0}
+    .aiot-list-item {margin:0 auto 50px auto; width:320px}
+    .aiot-list-item-title {font-size:29px; line-height:29px; padding:24px 0 0 0}
+    .aiot-list-item-text {font-size:18px; line-height:27px; padding:11px 0 0 0}
+    .aiot-list-item-buy {padding:15px 0 27px 0}
+    .aiot-list-item-btn .btn {height:40px; padding:0 20px; font-size:33px; line-height:40px}
 }
 
 .up-link {display:none; width:50px; height:50px; position:fixed; right:68px; bottom:38px; z-index:98; background:url(../images/up-link.png) no-repeat; border-radius:50%; border:2px solid #fa3842; transition:background-color 0.2s}
