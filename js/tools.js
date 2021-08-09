@@ -33,6 +33,14 @@ $(document).ready(function() {
 
     });
 
+    $('.links a').click(function(e) {
+        var curBlock = $($(this).attr('href'));
+        if (curBlock.length == 1) {
+            $('html, body').animate({'scrollTop': curBlock.offset().top});
+        }
+        e.preventDefault();
+    });
+
     $('.realme-8pro-slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -137,8 +145,8 @@ $(document).ready(function() {
 function windowOpen(windowID) {
     var curPadding = $('.wrapper').width();
     var curWidth = $(window).width();
-    if (curWidth < 480) {
-        curWidth = 480;
+    if (curWidth < 320) {
+        curWidth = 320;
     }
     var curScroll = $(window).scrollTop();
     $('html').addClass('window-open');
